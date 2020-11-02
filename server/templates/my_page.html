@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/my_page.css">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="height: 100%">
+
+  <div class="row" style="height: 10%"></div>
+
+  <div class="row my-row" style="height: 15%">
+    <div class="col"></div>
+    <div class="col-10">
+      <h1 class="text-sm-center" style="font-size: 50px">Din profil</h1>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="tab-content ml-1" id="myTabContent">
+    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+
+
+      <div class="row">
+        <div class="col-sm-3 col-md-2 col-5">
+          <label>Namn</label>
+        </div>
+        <div class="col-md-8 col-6">
+          {{current_user.firstname}} {{current_user.lastname}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 col-md-2 col-5">
+          <label>Mailadress</label>
+        </div>
+        <div class="col-md-8 col-6">
+          {{current_user.email}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 col-md-2 col-5">
+          <label>Leveransadress</label>
+        </div>
+        <div class="col-md-8 col-6">
+          Exempelgatan 13, Linköping 582 15
+        </div>
+      </div>
+
+      <div class="row py-5">
+
+        <div class="col-12 col-md pt-1 pt-md-0">
+          <button type="button" id="shopping-btn" class="btn btn-mod btn-default btn-block p-2"
+            onclick="my_pageApp.homebuttonClicked()">Till Startsidan</button>
+        </div>
+        <div class="col-12 col-md pt-1 pt-md-0">
+          <button type="button" id="shopping-btn" class="btn btn-mod btn-default btn-block p-2"
+            onclick="my_pageApp.orderbuttonClicked()">Se orderhistorik</button>
+        </div>
+        <div class="col-12 col-md pt-1 pt-md-0">
+          <button type="button" id="shopping-btn" class="btn btn-mod btn-default btn-block p-2"
+            onclick="my_pageApp.logoutButtonClicked()">Logga ut </button>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <img src="../static/images/shopping-redigerad.png" alt="" style="max-width: 100%">
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+    {% block scripts %}
+    <script src="/static/my_page.js"></script>
+    {% endblock %}

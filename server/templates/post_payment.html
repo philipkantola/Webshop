@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+
+{% block css %}
+<style>
+  .btn-mod:hover {
+    background-color: lightgrey;
+  }
+
+  .btn-mod {
+    border: 5px solid lightgrey;
+    font-size: 30px;
+  }
+
+  .btn-nav {
+    background-color: white;
+    color: black;
+    border-color: black !important;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col pt-4">
+      <h3>
+        {% if paid %}
+        Betalning genomförd!
+        {% else %}
+        Fel vid betalning.
+        {% endif %}
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    {% if paid %}
+    <div class="col col-md-6 offset-md-3">
+
+      Du har fått ett kvitto till den mailadress du angav vid betalning. Du kan även se kvittot genom
+      att
+      klicka på knappen nedan. {% if loggedIn %}Alla dina kvitton finns sparade på "Min sida".{% endif %}
+    </div>
+    {% else %}
+    <div class="col col-md-6 offset-md-3">
+      Något gick fel vid betalningen. Inga pengar har dragits från dit konto vänligen försök genomföra betalningen igen
+      genom att klicka på knappen nedan.
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="row pt-2">
+    <div class="col">
+      {% if paid %}
+      <a class="btn btn-mod" href="{{receipt_url}}" target="_blank" rel="noopener noreferrer">Klicka för att se
+        ditt kvitto</a>
+      {% else %}
+      <a class="btn btn-mod" href="/handla/varukorg">Klicka för att försöka
+        igen.</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row pt-2">
+    <div class="col">
+      <button onclick="window.location.assign('/')" class="btn btn-mod" id="back-home-btn">Gå till
+        startsidan</button>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

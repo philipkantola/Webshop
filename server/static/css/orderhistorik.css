@@ -1,0 +1,8 @@
+.btn-mod:hover {
+  background-color: lightgrey;
+}
+
+.btn-mod {
+  border: 5px solid lightgrey;
+  font-size: 30px;
+}

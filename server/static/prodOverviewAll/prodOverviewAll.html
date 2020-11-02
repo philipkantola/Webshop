@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/static/prodOverviewModule/prodOverviewModule.css">
+
+
+<div id="prodOverviewModule">
+
+    <div class="row">
+        <div class="col col-md-6 offset-md-3 pt-3 pb-3">
+            <div class="input-group mb-3">
+                <input type="text" id="search-text" class="form-control" placeholder="Klicka för att skriva vad du söker efter." >
+                <div class="input-group-append">
+                    <button class="btn btn-own" type="button" id="search-btn" onclick="prodOverviewModuleApp.search(false)">Klicka för att söka</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center p-2">
+
+
+        <div class="col-2 text-left pt-2 pb-2 d-none d-md-block">
+            <img class="scroll-btn" id="scroll-btn-left" src="/static/prodOverviewModule/caret-left.svg"
+                alt="left arrow">
+        </div>
+
+        <!-- <div id="prodOverviewModule-product-target-area" class="col text-center"> -->
+        <div id="prodOverviewModule-product-target-area" class="col">
+            <div class="text-center">
+                <h3>Laddar produkter...</h3>
+            </div>
+        </div>
+
+        <div class="col-2 text-right pt-2 pb-2 d-none d-md-block">
+            <img class="scroll-btn" id="scroll-btn-right" src="/static/prodOverviewModule/caret-right.svg"
+                alt="right arrow">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</div>

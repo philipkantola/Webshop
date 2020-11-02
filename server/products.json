@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "prodID": 1,
+      "name": "TestName1",
+      "desc": "description 1",
+      "price": "10",
+      "img": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.visitsealife.com%2Fazure%2Fmedia%2F1066%2Fsea-horse.jpg%3Fquality%3D80%26w%3D640%26format%3Djpg%26h%3D640%26mode%3Dcrop%26scale%3Dboth&f=1"
+    },
+    {
+      "prodID": 2,
+      "name": "TestName2",
+      "desc": "description 2",
+      "price": "20",
+      "img": "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.abc.net.au%2Fradionational%2Fimage%2F6309188-1x1-700x700.jpg&f=1"
+    },
+    {
+      "prodID": 3,
+      "name": "TestName3",
+      "desc": "description 3",
+      "price": "30",
+      "img": "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.aaartnl.nl%2Fimages%2Fkunstwerken%2Forigineel%2F17434_1%2Fanton-heyboer-schilderij-duck.jpg&f=1"
+    },
+    {
+      "prodID": 4,
+      "name": "TestName4",
+      "desc": "description 4",
+      "price": "40",
+      "img": "https://imgflip.com/s/meme/Grandma-Finds-The-Internet.jpg"
+    },
+    {
+      "prodID": 5,
+      "name": "TestName5",
+      "desc": "description 5",
+      "price": "50",
+      "img": "https://imgflip.com/s/meme/Grandma-Finds-The-Internet.jpg"
+
+    },
+     {
+       "prodID": 6,
+       "name": "TestName6",
+       "desc": "description 6",
+       "price": "60",
+       "img": "https://imgflip.com/s/meme/Grandma-Finds-The-Internet.jpg"
+
+     },
+      {
+        "prodID": 7,
+        "name": "TestName7",
+        "desc": "description 7",
+        "price": "70",
+        "img": "https://imgflip.com/s/meme/Grandma-Finds-The-Internet.jpg"
+
+    },
+     {
+       "prodID": 8,
+       "name": "TestName8",
+       "desc": "description 8",
+       "price": "80",
+       "img": "https://imgflip.com/s/meme/Grandma-Finds-The-Internet.jpg"
+
+          }
+  ]
+}

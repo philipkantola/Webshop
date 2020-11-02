@@ -1,0 +1,36 @@
+#view-shopping-cart-btn{
+background-color: white;
+color: black;
+border-color: black!important;
+
+}
+
+#view-shopping-cart-btn:hover{
+  background-color: #ffeb3b;
+  border-color: black!important;
+  }
+
+#continue-shopping-btn{
+  background-color: white;
+  color: black;
+  border-color: black!important;
+}
+
+#back-shopping-btn{
+  background-color: white;
+  color: black;
+  border-color: black!important;
+}
+
+body {
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+#main-shopping-area{
+  min-height: 80vh;
+}
+
+nav.container-fluid{
+  background-color: whitesmoke;
+}

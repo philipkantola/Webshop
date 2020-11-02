@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Logga in på mina sidor</h2>
+  <p>Vänligen fyll i dina inloggninsuppgifter för att komma åt dina sidor.</p>
+  <!-- INFORM LOGIN -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <!-- END NFORM LOGIN -->
+  <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" class="form-control" name="email" required="" size="32" type="text" value=""
+        placeholder="Skriv din mailadress här">
+      {% for error in form.email.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+      <small id="emailHelp" class="form-text text-muted">Vi delar inte din mailadress med någon annan.</small>
+    </div>
+    <div class="form-group">
+      <label for="password">Lösenord</label>
+      <input id="password" class="form-control" name="password" required="" size="32" type="password" value=""
+        placeholder="Lösenord">
+      {% for error in form.password.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="remember_me" name="remember_me" value="y">
+      <label for="remember_me" class="form-check-label" for="exampleCheck1">Kom ihåg mig</label>
+    </div>
+    <input class="btn btn-primary" id="submit" name="submit" type="submit" value="Logga in">
+  </form>
+  <p>Ny kund? <a href="{{ url_for('register') }}">Klicka här för att göra ett konto!</a></p>
+</div>
+
+<div class="row my-row" style="height: 40%">
+  <div class="col-8"></div>
+  <div class="col-4">
+    <img src="../static/images/shopping-redigerad.png" alt="" style="max-width: 100%">
+  </div>
+</div>
+</div>
+
+{% endblock %}

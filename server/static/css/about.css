@@ -1,0 +1,17 @@
+.btn-mod:hover {
+  background-color: lightgrey;
+}
+
+.btn-mod {
+  border: 5px solid lightgrey;
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  #heading {
+    font-size: 50px;
+  }
+  #about-text {
+    font-size: 26px;
+  }
+}

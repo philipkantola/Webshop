@@ -1,0 +1,10 @@
+.btn-mod{
+  color: black;
+  background-color: yellow;
+  /* width: 185px; */
+  text-shadow: none;
+}
+
+.btn-mod:active{
+  background-color: #d4d422;
+}

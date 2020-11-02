@@ -1,0 +1,46 @@
+/* To scope the css to the module. one most wrap everything in a div element and giv this element a unique id.
+Then all css most start with tha id, see below.*/
+
+#huvudkatvy .col-own-style {
+  height: 80px;
+  /*margin: 1%;*/
+  background-color: white;
+
+  color: black;
+}
+#detaljkategori .col-own-style:hover {
+
+}
+
+#detaljkategori .col-sm-6:hover {
+  
+}
+
+#detaljkategori .classWitPad {
+  margin: 2%;
+  padding: 2%;
+}
+
+#detaljkategori .showall {
+  margin: 2%;
+  margin-top: 100px;
+  padding: 2%;
+  width: 274px;
+  text-align: center;
+  font-size: 20px;
+
+
+}
+
+#detaljkategori .card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+#detaljkategori .card-img-overlay:hover {
+  background-color: rgba(138, 138, 138, 0.199);
+  cursor: pointer;
+}
+
+#detaljkategori .card h1{
+  background-color: white;
+  border-radius: 10px;
+}

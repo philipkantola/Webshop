@@ -1,0 +1,12 @@
+#my-btn:hover {
+  background-color: lightgrey;
+}
+
+#my-btn {
+  border: 5px solid lightgrey;
+  font-size: 30px;
+}
+
+/* #about-btn:hover {
+    background-color: #B37ED5;
+  } */

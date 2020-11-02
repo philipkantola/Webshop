@@ -1,0 +1,1 @@
+Filer som ligger i denna mapp kommer vara tillgängliga via ADRESS/static/FILNAMN

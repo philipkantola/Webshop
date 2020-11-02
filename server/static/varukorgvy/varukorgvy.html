@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/static/varukorgvy/varukorgvy.css">
+
+
+<div id="varukorgvy">
+  <!-- Button to Open the Modal -->
+
+
+  <!-- The Modal -->
+  <div class="modal" id="confirmDeleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Är du säker?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          Är du säker på att du vill ta bort alla varor i varukorgen?
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer text-center">
+          <div class="col"><button class="btn btn-danger" onclick="varukorgvyApp.clearCart()"
+              data-dismiss="modal">Ja</button></div>
+          <div class="col"> <button type="button" class="btn btn-success" data-dismiss="modal">Nej</button></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <table class="mt-3 table ">
+    <thead>
+      <tr>
+        <th scope="col">Produkt</th>
+        <th scope="col">Pris</th>
+        <th scope="col">Antal</th>
+        <th scope="col">Totalt</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="table-foot">
+        <th scope="row" colspan="2" class="text-right">Att betala:</th>
+        <td id="price-sum"></td>
+        <td class="text-right"><button id="deleteallbtn" type="button" class="btn btn-danger" data-toggle="modal"
+            data-target="#confirmDeleteModal">Töm varukorg</button></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" id="paymentbutton" onclick="varukorgvyApp.toPayment()"><span>Till betalning</span></button>
+</div>

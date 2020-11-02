@@ -1,0 +1,65 @@
+<!-- Mer info finns här https://stripe.com/docs/checkout -->
+<!-- Fungerande testkort 4242424242424242 -->
+<link rel="stylesheet" href="/static/css/checkout.css">
+<style>
+  #payment {
+    background-color: white;
+    border-radius: 10px;
+  }
+</style>
+<div id="payment" class="mt-2 p-2">
+  <div class="row text-center">
+    <div class="col">
+      <!-- <h1>Du ska betala {{"{0:.2f}".format(totalToPay)}}kr.</h1> -->
+      <p>Här under kan du se vad du kommer köpa.</p>
+      {% if not current_user.is_authenticated %}
+      <p><i>Notera att du inte är inloggad. Det går bra att genomföra sitt köp ändå men du måste själv skriva ner ditt
+          order id om du vill behöver hjälp senare.</i></p>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Produkt</th>
+            <th scope="col">Pris</th>
+            <th class="text-center" scope="col">Antal</th>
+            <th scope="col">Summa</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          <tr>
+            <th scope="row">{{item['product'].name}}</th>
+            <td>{{"{0:.2f}".format(item['product'].price)}} kr</td>
+            <td class="text-center">{{item['amount']}}</td>
+            <td>{{"{0:.2f}".format(item['amount'] * item['product'].price)}} kr</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <div class="row text-right">
+    <div class="col-md-9">Du ska betala <strong>{{"{0:.2f}".format(totalToPay)}}kr.</strong></div>
+    <div class="col">
+      <form action="/pay" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{stripe_pk_key}}"
+          data-amount="{{totalToPay*100}}" data-name="Enkel handel" data-description="Example charge"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="sv"
+          data-currency="sek" data-panel-label="Betala" data-label="Klicka här för att betala"
+          data-billing-address="true" data-shipping-address="true">
+          </script>
+        <input type="hidden" id="checkval" name="checkval" value="{{hashval}}">
+        <input type="hidden" id="orderId" name="orderId" value="{{orderId}}">
+      </form>
+    </div>
+  </div>
+
+</div>

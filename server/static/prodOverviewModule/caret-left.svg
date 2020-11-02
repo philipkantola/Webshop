@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" width="64" height="64">
+  <style>
+    .arrow { font: 8px helvetica; fill: black ;}
+  </style>
+    <polygon points="32 63
+                   32 42
+                   48 42
+                   48 22
+                   32 22
+                   32 1
+                   1 32"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="black"
+           stroke-width="1"/>
+  <text x="8" y="35" class="arrow">TILLBAKA</text>
+</svg>
+
+<!--Old arrow-->
+<!--<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">-->
+  <!--<path d="M4 0l-4 4 4 4v-8z" transform="translate(2)" />-->
+<!--</svg>-->

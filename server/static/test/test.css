@@ -1,0 +1,18 @@
+/* To scope the css to the module. one most wrap everything in a div element and giv this element a unique id.
+Then all css most start with tha id, see below.*/
+
+#test h1 {
+    color: red;
+}
+
+#test p {
+    color: green;
+}
+
+#test #specialp {
+    color: purple;
+}
+
+#test #specialp2 {
+    color: purple;
+}

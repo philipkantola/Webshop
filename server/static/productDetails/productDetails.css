@@ -1,0 +1,57 @@
+
+#productDetails {
+position: relative;
+background-color: white;
+}
+
+#productDetails .img-fluid{
+box-shadow: 10px 10px 5px grey;
+}
+
+#productDetails .columnDetails {
+margin: 5% 5% 5% 5%;
+width: 40%;
+}
+
+
+#productDetails #arrowVarukorg {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: yellow;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  /* width: 250px; */
+  width: 198px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 12px;
+  margin-left: 80%;
+}
+
+#productDetails #arrowVarukorg span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#productDetails #arrowVarukorg span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#productDetails #arrowVarukorg:hover span {
+  padding-right: 25px;
+}
+
+#productDetails #arrowVarukorg:hover span:after {
+  opacity: 1;
+  right: 0;
+}
